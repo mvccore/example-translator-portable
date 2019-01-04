@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>e2-translator</Name>
+    <ProjectGuid>{6272ef39-9f30-4153-ad69-d6b2f2fe34fa}</ProjectGuid>
+    <RootNamespace>translator</RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+    <Server>PHPDev</Server>
+    <PublishEvent>None</PublishEvent>
+    <PHPDevAutoPort>True</PHPDevAutoPort>
+    <PHPDevPort>8309</PHPDevPort>
+    <PHPDevHostName>localhost</PHPDevHostName>
+    <IISProjectUrl>http://localhost:8309/</IISProjectUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="build\" />
+    <Folder Include="build\configs\" />
+    <Folder Include="release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="build\configs\phar-with-composer.php" />
+    <Compile Include="build\configs\php-with-composer-preserve-hdd.php" />
+    <Compile Include="build\configs\php-with-composer-preserve-package.php" />
+    <Compile Include="build\configs\php-with-composer-strict-hdd.php" />
+    <Compile Include="build\configs\php-with-composer-strict-package.php" />
+    <Compile Include="build\make-phar.php" />
+    <Compile Include="build\make-php.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include=".hgignore" />
+    <Content Include="build\make-phar.cmd" />
+    <Content Include="build\make-phar.sh" />
+    <Content Include="build\make-php.cmd" />
+    <Content Include="build\make-php.sh" />
+    <Content Include="composer-update-dev.cmd" />
+    <Content Include="composer-update.cmd" />
+    <Content Include="composer.dev.json" />
+    <Content Include="composer.json" />
+    <Content Include="LICENCE.md" />
+    <Content Include="README.md" />
+    <Content Include="release\.htaccess" />
+    <Content Include="release\web.config" />
+  </ItemGroup>
+</Project>
