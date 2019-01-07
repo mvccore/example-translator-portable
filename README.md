@@ -1,13 +1,35 @@
-# MvcCore - Example - Piglatin Translator
+# MvcCore - Example - Pig-Latin Translator [portable]
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v4.2.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator/releases)
-[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator/blob/master/LICENCE.md)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/releases)
+[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/blob/master/LICENCE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
-![PHP Version](https://img.shields.io/badge/PHP->=5.3-brightgreen.svg?style=plastic)
+![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
-- [**MvcCore**](https://github.com/mvccore/mvccore) application with standard and ajax requests to translate english into piglatin.
-- **Result** is **completly portable** - `./release/index.php`
-- Result application **currently packed in strict package mode**, all packing configurations included in `./.packager/`
+Skeleton for MvcCore [Pig-Latin Translator (`mvccore/example-translator`)](https://github.com/mvccore/example-translator) example portable packing/building.
+
+## Instalation
+```shell
+# load translator portable project skeleton
+composer create-project mvccore/example-translator-portable
+
+# go to portable project skeleton directory
+cd example-translator-portable
+
+# load translator project
+composer create-project mvccore/example-translator ./development
+
+# go to translator project directory
+cd ./development
+
+# update dependencies for translator development sources
+composer update
+```
+
+## Packed Result Features
+
+- **Result** is **completly portable** - `./example-translator-portable/release/index.php`
+- Result application is **currently packed in strict package mode**
+- All packing configurations are included in `./build/configs` directory
 - Packed with [**Packager library - mvccore/packager**](https://github.com/mvccore/packager)), all packing ways possible:
   - **PHAR file**
     - standard PHAR package with whole devel dir content
@@ -30,50 +52,38 @@
         but PHTML templates, all CSS/JS/fonts and images are on HDD
       - no PHP file system function is wrapped
 
-## Instalation
-```shell
-# load example
-composer create-project mvccore/example-translator
-
-# go to project development dir
-cd example-translator/development
-
-# update dependencies for app development sources
-composer update
-```
-
 ## Build
 
-### 1. Prepare application
-- go to `example-translator/development`
+### 1. Prepare Application
+- go to `example-translator-portable/development`
 - clear everything in `./Var/Tmp/`
 - change `$app->Run();` to `$app->Run(1);` in `./index.php`
-- visit all aplication routes where are different JS/CSS bundles 
+- visit all application routes where are different JS/CSS bundles 
   groups to generate `./Var/Tmp/` content for result app
 - run build process
 
-### 2. Build
+### 2. Run Build Process
 
 #### Linux:
 ```shell
-# go to project root dir
-cd example-translator
+# go to project build dir
+cd example-translator-portable/build
 # run build process into single PHP file
 sh make.sh
 ```
 
 #### Windows:
 ```shell
-# go to project root dir
-cd example-translator
+# go to project build dir
+cd example-translator-portable/build
 # run build process into single PHP file
 make.cmd
 ```
 
 #### Browser:
 ```shell
-# visit script `make-php.php` in your project root directory:
-http://localhost/example-translator/make-php.php
+# visit script `make-php.php` in your project build directory:
+http://localhost/example-translator-portable/build/make-php.php
 # now run your result in:
-http://localhost/example-translator/release/
+http://localhost/example-translator-portable/release/
 ```
