@@ -27,12 +27,12 @@ composer update
 
 ## Packed Result Features
 
-- **Result** is **completly portable** - `./example-translator-portable/release/index.php`
+- **Result** is **completelly portable** - `./example-translator-portable/release/index.php`
 - Result application is **currently packed in strict package mode**
 - All packing configurations are included in `./build/configs` directory
 - Packed with [**Packager library - mvccore/packager**](https://github.com/mvccore/packager)), all packing ways possible:
   - **PHAR file**
-    - standard PHAR package with whole devel dir content
+    - standard PHAR package with whole development directory content
   - **PHP file**
     - **strict package**
       - everything is contained in result `index.php`
@@ -46,7 +46,7 @@ composer update
       - result `index.php` file contains PHP files, 
         PHTML templates but no CSS/JS/fonts or images
       - all wrapped file system functions are looking on HDD first, 
-        then they try to read data from package inself
+        then they try to read data from package itself
     - **strict hdd**
       - result `index.php` file contains only PHP files, 
         but PHTML templates, all CSS/JS/fonts and images are on HDD
