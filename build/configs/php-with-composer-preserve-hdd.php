@@ -32,10 +32,10 @@ $config = [
 		"#^/vendor/composer/.*#",						// composer itself
 		"#^/vendor/autoload\.php$#",					// composer autoload file
 		"#^/vendor/mvccore/mvccore/src/startup\.php$#",	// mvccore autoload file
-		"#^/vendor/tracy/.*#",							// tracy library (https://tracy.nette.org/)
+		"#^/vendor.*/tracy/.*#",						// tracy library (https://tracy.nette.org/)
 		"#^/vendor/mvccore/ext-debug-tracy.*#",			// mvccore tracy adapter and all tracy panel extensions
 		"#^/vendor/mrclay/.*#",							// HTML/JS/CSS minify library
-		
+
 		// Exclude everything from '/static/...' and '/Var/Tmp' directory:
 		// If you want to use this config, you need to copy manually everything 'from' => 'to':
 		// - '/development/static/fonts'	=> '/release/static/fonts'
