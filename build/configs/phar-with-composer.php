@@ -24,7 +24,7 @@ $config = [
 		"#^/vendor/tracy/tracy/tools/#",				//   loaded PHP scripts by composer - added later
 		"#^/vendor/mvccore/ext-debug-tracy.*#",			// - mvccore tracy adapter and all tracy panel extensions
 		"#^/vendor/mrclay/.*#",							// - HTML/JS/CSS minify library
-		
+
 		// Exclude source css and js files, use only what is generated in '/Var/Tmp' dir
 		"#^/static/js#",
 		"#^/static/css#",
@@ -40,9 +40,9 @@ $config = [
 	// (replacements are executed before configured minification in RAM, they don't affect anything on hard drive)
 	'stringReplacements'	=> [
 		// Switch \MvcCore application back from SFU mode to automatic compile mode detection
-		'->Run(1);'									=> '->Run();',
+		'->SetCompiled(\MvcCore\Application::COMPILED_SFU)'	=> '',
 		// Remove tracy debug library:
-		"class_exists('\MvcCore\Ext\Debugs\Tracy')"	=> 'FALSE',
+		"class_exists('\MvcCore\Ext\Debugs\Tracy')"			=> 'FALSE',
 	],
 	'minifyTemplates'		=> 1,// Remove non-conditional comments and white spaces
 	'minifyPhp'				=> 1,// Remove comments and white spaces
