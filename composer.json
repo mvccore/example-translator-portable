@@ -1,7 +1,7 @@
 {
 	"name": "mvccore/example-translator-portable",
 	"type": "project",
-	"description": "MvcCore Example - Pig Latin Translator [portable] - skeleton to build/pack MvcCore Pig-Latin Translator example.",
+	"description": "MvcCore Example - Pig Latin Translator For Portable Packing - skeleton to build/pack MvcCore Pig-Latin Translator example.",
 	"keywords": [
 		"mvccore",
 		"framework",
@@ -15,11 +15,13 @@
 		"translator",
 		"example"
 	],
-	"license": ["BSD-3-Clause"],
-	"authors": [{
-		"name": "Tom Flidr",
-		"homepage": "https://github.com/tomFlidr"
-	}],
+	"license": [ "BSD-3-Clause" ],
+	"authors": [
+		{
+			"name": "Tom Flidr",
+			"homepage": "https://github.com/tomFlidr"
+		}
+	],
 	"require": {
 		"php": ">=5.4.0",
 		"mrclay/minify": "2.3.*",

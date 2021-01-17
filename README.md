@@ -1,7 +1,7 @@
-# MvcCore - Example - Pig-Latin Translator [portable]
+# MvcCore - Example - Pig-Latin Translator For Portable Packing
 
 [![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/releases)
-[![License](https://img.shields.io/badge/Licence-BSD-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/blob/master/LICENCE.md)
+[![License](https://img.shields.io/badge/License-BSD%203-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/5.0.0/LICENCE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
 
@@ -10,10 +10,10 @@ Skeleton for MvcCore [Pig-Latin Translator (`mvccore/example-translator`)](https
 ## Instalation
 ```shell
 # load translator portable project skeleton
-composer create-project mvccore/example-translator-portable
+composer create-project mvccore/example-translator-portable ./my-translator
 
 # go to portable project skeleton directory
-cd example-translator-portable
+cd my-translator
 
 # load translator project
 composer create-project mvccore/example-translator ./development
