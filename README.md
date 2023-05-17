@@ -1,6 +1,6 @@
 # MvcCore - Example - Pig-Latin Translator For Portable Packing
 
-[![Latest Stable Version](https://img.shields.io/badge/Stable-v5.0.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/releases)
+[![Latest Stable Version](https://img.shields.io/badge/Stable-v5.2.0-brightgreen.svg?style=plastic)](https://github.com/mvccore/example-translator-portable/releases)
 [![License](https://img.shields.io/badge/License-BSD%203-brightgreen.svg?style=plastic)](https://mvccore.github.io/docs/mvccore/5.0.0/LICENSE.md)
 [![Packager Build](https://img.shields.io/badge/Packager%20Build-passing-brightgreen.svg?style=plastic)](https://github.com/mvccore/packager)
 ![PHP Version](https://img.shields.io/badge/PHP->=5.4-brightgreen.svg?style=plastic)
@@ -17,12 +17,6 @@ cd my-translator
 
 # load translator project
 composer create-project mvccore/example-translator ./development
-
-# go to translator project directory
-cd ./development
-
-# update dependencies for translator development sources
-composer update
 ```
 
 ## Packed Result Features
@@ -55,9 +49,9 @@ composer update
 ## Build
 
 ### 1. Prepare Application
-- go to `example-translator-portable/development`
+- go to `./my-translator/development`
 - clear everything in `./Var/Tmp/`
-- change `$app->Run();` to `$app->Run(1);` in `./index.php`
+- uncomment `->SetCompiled(\MvcCore\Application::COMPILED_SFU)` in `./index.php`
 - visit all application routes where are different JS/CSS bundles 
   groups to generate `./Var/Tmp/` content for result app
 - run build process
@@ -67,7 +61,7 @@ composer update
 #### Linux:
 ```shell
 # go to project build dir
-cd example-translator-portable/build
+cd ./my-translator/build
 # run build process into single PHP file
 sh make.sh
 ```
@@ -75,7 +69,7 @@ sh make.sh
 #### Windows:
 ```shell
 # go to project build dir
-cd example-translator-portable/build
+cd ./my-translator/build
 # run build process into single PHP file
 make.cmd
 ```
@@ -83,7 +77,7 @@ make.cmd
 #### Browser:
 ```shell
 # visit script `make-php.php` in your project build directory:
-http://localhost/example-translator-portable/build/make-php.php
+http://localhost/my-translator/build/make-php.php
 # now run your result in:
-http://localhost/example-translator-portable/release/
+http://localhost/my-translator/release/
 ```
